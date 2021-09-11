@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DGSDK"
-  spec.version      = "6.3.6.1"
+  spec.version      = "6.3.6.4"
   spec.summary      = "use DGSDK."
 
   spec.description  = <<-DESC
@@ -36,7 +36,7 @@ Pod::Spec.new do |spec|
     'VALID_ARCHS' =>  valid_archs.join(' '),
   }
   
-  spec.dependency 'FBSDKCoreKit','~> 9.1.0'
-  spec.dependency 'FBSDKLoginKit','~> 9.1.0'
+  spec.dependency 'FBSDKCoreKit','~> 11.1.0'
+  spec.dependency 'FBSDKLoginKit','~> 11.1.0'
 
 end
