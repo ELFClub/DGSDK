@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DGSDK"
-  spec.version      = "6.3.6.5"
+  spec.version      = "6.3.6.6"
   spec.summary      = "use DGSDK."
 
   spec.description  = <<-DESC
@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks =  ['DGSDK/Frameworks/DGSDK.framework','DGSDK/Frameworks/TapDB.framework']
   spec.resource = 'DGSDK/Frameworks/DGSDK.framework/DGBundle.bundle'
 
-  valid_archs     = ['armv7', 'x86_64', 'arm64']
+  valid_archs     = ['armv7','x86_64', 'arm64']
   spec.xcconfig   = {
     'VALID_ARCHS' =>  valid_archs.join(' '),
   }
