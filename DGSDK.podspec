@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
   spec.frameworks   = 'UIKit', 'Security', 'AdSupport'
   spec.libraries    = 'c++'
 
-  spec.vendored_frameworks =  ['DGSDK/Frameworks/DGSDK.framework','DGSDK/Frameworks/TapDB_iOS.framework']
+  spec.vendored_frameworks =  ['DGSDK/Frameworks/DGSDK.framework','DGSDK/Frameworks/TapDB.framework']
   spec.resource = 'DGSDK/Frameworks/DGSDK.framework/DGBundle.bundle'
 
   valid_archs     = ['armv7', 'x86_64', 'arm64']
