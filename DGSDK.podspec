@@ -29,9 +29,9 @@ Pod::Spec.new do |spec|
   spec.libraries    = 'c++','resolv','sqlite3','z'
 
   spec.vendored_frameworks =  ['DGSDK/Frameworks/DGSDK.framework','DGSDK/Frameworks/TapDB.framework']
-  spec.resource = 'DGSDK/Frameworks/DGSDK.framework/DGBundle.bundle'
+ # spec.resource = 'DGSDK/Frameworks/DGSDK.framework/DGBundle.bundle'
 
-  valid_archs     = ['armv7','x86_64', 'arm64']
+  valid_archs     = ['armv7', 'arm64']
   spec.xcconfig   = {
     'VALID_ARCHS' =>  valid_archs.join(' '),
   }
