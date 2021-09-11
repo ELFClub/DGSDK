@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DGSDK"
-  spec.version      = "6.3.6.8.4"
+  spec.version      = "6.3.6.8.5"
   spec.summary      = "use DGSDK."
 
   spec.description  = <<-DESC
@@ -28,8 +28,9 @@ Pod::Spec.new do |spec|
   spec.frameworks   = 'UIKit', 'Security', 'AdSupport', 'SystemConfiguration', 'CoreMotion'
   spec.libraries    = 'c++','resolv','sqlite3','z'
 
-# spec.vendored_frameworks =  ['DGSDK/Frameworks/DGSDK.framework','DGSDK/Frameworks/TapDB.framework']
-# spec.resource = 'DGSDK/Frameworks/DGSDK.framework/DGBundle.bundle'
+#spec.vendored_frameworks =  ['DGSDK/Frameworks/DGSDK.framework','DGSDK/Frameworks/TapDB.framework']
+spec.vendored_frameworks =  ['DGSDK/Frameworks/DGSDK.framework']
+spec.resource = 'DGSDK/Frameworks/DGSDK.framework/DGBundle.bundle'
 
   valid_archs     = ['armv7', 'arm64']
   spec.xcconfig   = {
