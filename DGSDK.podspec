@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DGSDK"
-  spec.version      = "6.3.6.83"
+  spec.version      = "6.3.6.84"
   spec.summary      = "use DGSDK."
 
   spec.description  = <<-DESC
