@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DGSDK"
-  spec.version      = "6.3.6.84"
+  spec.version      = "6.3.6.9"
   spec.summary      = "use DGSDK."
 
   spec.description  = <<-DESC
@@ -28,14 +28,18 @@ Pod::Spec.new do |spec|
   spec.frameworks   = 'UIKit', 'Security', 'AdSupport', 'SystemConfiguration', 'CoreMotion'
   spec.libraries    = 'c++','resolv','sqlite3','z'
 
-#spec.vendored_frameworks =  ['DGSDK/Frameworks/DGSDK.framework','DGSDK/Frameworks/TapDB.framework']
-spec.vendored_frameworks =  ['DGSDK/Frameworks/DGSDK.framework']
+spec.vendored_frameworks =  ['DGSDK/Frameworks/DGSDK.framework','DGSDK/Frameworks/TapDB.framework']
 spec.resource = 'DGSDK/Frameworks/DGSDK.framework/DGBundle.bundle'
 
-  valid_archs     = ['armv7', 'arm64']
+  valid_archs     = ['armv7','x86_64', 'arm64']
   spec.xcconfig   = {
     'VALID_ARCHS' =>  valid_archs.join(' '),
   }
+  spec.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+
   
   spec.dependency 'FBSDKCoreKit','~> 11.1.0'
   spec.dependency 'FBSDKLoginKit','~> 11.1.0'
