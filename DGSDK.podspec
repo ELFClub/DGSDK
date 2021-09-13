@@ -35,10 +35,10 @@ spec.resource = 'DGSDK/Frameworks/DGSDK.framework/DGBundle.bundle'
   spec.xcconfig   = {
     'VALID_ARCHS' =>  valid_archs.join(' '),
   }
-  # spec.pod_target_xcconfig = {
-  #   'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => ['arm64', 'i386']
-  # }
-  # spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => ['arm64', 'i386'] }
+  spec.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
   
   spec.dependency 'FBSDKCoreKit','~> 11.1.0'
