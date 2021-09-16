@@ -49,7 +49,7 @@ extern NSString *const DG_LOGIN_COLSE_JSOC;         //web关闭
 extern NSString *const DG_LOGIN_FB_JSOC;            //FB登陆回调
 extern NSString *const DG_LOGIN_GOOGLE_JSOC;        //Google登陆回调
 extern NSString *const DG_LOGOUT_JSOC;              //注销
-extern NSString *const DG_SHARE_WECHAT_JSOC;        //微信分享回调
+//extern NSString *const DG_SHARE_WECHAT_JSOC;        //微信分享回调
 extern NSString *const DG_REVIEW_STAR_JSOC;
 extern NSString *const DG_REMOVE_TRANSCATIONS;      //删除TRANSCATIONS
 extern NSString *const DG_SIMULATED_LOGIN_JSOC;     //模拟登录

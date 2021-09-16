@@ -28,17 +28,18 @@ Pod::Spec.new do |spec|
   spec.frameworks   = 'UIKit', 'Security', 'AdSupport', 'SystemConfiguration', 'CoreMotion'
   spec.libraries    = 'c++','resolv','sqlite3','z'
   spec.swift_version    = '5.0'
-  spec.vendored_frameworks =  ['DGSDK/Frameworks/DGSDK.framework','DGSDK/Frameworks/TapDB.framework']
+  # spec.vendored_frameworks =  ['DGSDK/Frameworks/DGSDK.framework','DGSDK/Frameworks/TapDB.framework']
+  spec.vendored_frameworks =  ['DGSDK/Frameworks/TapDB.framework']
   spec.resource = 'DGSDK/Frameworks/DGSDK.framework/DGBundle.bundle'
 
-  valid_archs     = ['arm64']
+  valid_archs     = ['armv7','arm64']
   spec.xcconfig   = {
     'VALID_ARCHS' =>  valid_archs.join(' '),
   }
-  spec.pod_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
-  }
-  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  # spec.pod_target_xcconfig = {
+  #   'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64'
+  # }
+  # spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
 
   
   spec.dependency 'FBSDKCoreKit','~> 11.1.0'
