@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
 
   spec.author       = { "bruce" => "1064124945@qq.com" }
 
-  spec.platform     = :ios, "9.0"
+  spec.platform     = :ios, "10.0"
 
 
 
@@ -25,11 +25,10 @@ Pod::Spec.new do |spec|
   #
 
 
-  spec.frameworks   = 'UIKit', 'Security', 'AdSupport', 'SystemConfiguration', 'CoreMotion'
+  spec.frameworks   = 'UIKit', 'Security', 'AdSupport', 'SystemConfiguration', 'CoreMotion', 'CoreTelephony'
   spec.libraries    = 'c++','resolv','sqlite3','z'
   spec.swift_version    = '5.0'
   spec.vendored_frameworks =  ['DGSDK/Frameworks/CGYSDK.framework','DGSDK/Frameworks/TapDB.framework']
-  # spec.vendored_frameworks =  ['DGSDK/Frameworks/TapDB_iOS.framework']
   spec.resource = 'DGSDK/Frameworks/CGYSDK.framework/CGYBundle.bundle'
 
   valid_archs     = ['armv7','arm64']
